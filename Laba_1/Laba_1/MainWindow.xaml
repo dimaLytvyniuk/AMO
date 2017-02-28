@@ -1,0 +1,16 @@
+﻿<Window x:Class="Laba_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laba_1"
+        mc:Ignorable="d"
+        Title="Лабораторна Робота №1 - Головне меню" Height="510" Width="474" ResizeMode="CanMinimize" Icon="Resources/favicon.ico" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="button_Lin" Content="Лінійний алгоритм" HorizontalAlignment="Left" Margin="105,60,0,0" VerticalAlignment="Top" Width="263" Height="40" Background="White" FontFamily="Segoe WP" FontSize="16" Click="button_Lin_Click" />
+        <Button x:Name="button_Roz" Content="Алгоритм, що розгалужується" HorizontalAlignment="Left" Margin="105,160,0,0" VerticalAlignment="Top" Width="263" Height="40" Background="White" FontFamily="Segoe WP" FontSize="16" Click="button_Roz_Click" />
+        <Button x:Name="button_Circle" Content="Циклічний алгоритм" HorizontalAlignment="Left" Margin="105,260,0,0" VerticalAlignment="Top" Width="263" Height="40" Background="White" FontFamily="Segoe WP" FontSize="16" />
+        <Button x:Name="button_Exit" Content="Вихід" HorizontalAlignment="Left" Margin="105,360,0,0" VerticalAlignment="Top" Width="263" Height="40" Background="White" FontFamily="Segoe WP" FontSize="16" />
+
+    </Grid>
+</Window>
