@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.IO;
 using Microsoft.Win32;
+using System.Diagnostics;
 
 namespace Laba_1
 {
@@ -87,7 +88,7 @@ namespace Laba_1
                         }
                         else
                         {
-                            MessageBox.Show("Не коректні дані у файлі", "Виконано");
+                            MessageBox.Show("Не коректні дані у файлі", "Помилка");
                             return false;
                         }
                     }
@@ -101,7 +102,8 @@ namespace Laba_1
                     }
                 }
 
-                MessageBox.Show("Результат записаний у файл " + output, "Помилка");
+                //MessageBox.Show("Результат записаний у файл " + output, "Complete");
+                Process.Start(output);
                 return true;
             }
             else

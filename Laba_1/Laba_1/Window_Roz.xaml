@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laba_1"
         mc:Ignorable="d"
-        Title="Лабораторна робота №1 - Алгоритм, що розгалужується" Height="465" Width="740" ResizeMode="CanMinimize" Icon="Resources/favicon.ico" WindowStartupLocation="CenterScreen">
+        Title="Лабораторна робота №1 - Алгоритм, що розгалужується" Height="465" Width="740" ResizeMode="CanMinimize" Icon="/Laba_1;component/Resources/favicon.ico" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label x:Name="label" Content="Завдання:" HorizontalAlignment="Left" Height="31" Margin="329,25,0,0" VerticalAlignment="Top" Width="82" FontFamily="Segoe WP" FontSize="16"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="87" Margin="243,61,0,0" VerticalAlignment="Top" Width="254" Source="Resources/Roz_task.PNG"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="87" Margin="243,61,0,0" VerticalAlignment="Top" Width="254" Source="/Laba_1;component/Resources/Roz_task.PNG"/>
         <TextBox x:Name="textBox_A" HorizontalAlignment="Left" Height="31" Margin="52,176,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="59" MaxLines="1" FontFamily="Yu Gothic Medium" TextAlignment="Right" FontSize="17" TextOptions.TextHintingMode="Fixed" MinLines="1" MaxLength="5" BorderThickness="1" BorderBrush="Black" PreviewTextInput="textBox_A_PreviewTextInput"/>
         <Label x:Name="label_1" Content="x" HorizontalAlignment="Left" Height="39" Margin="25,165,0,0" VerticalAlignment="Top" Width="27" FontFamily="Gabriola" FontSize="27"/>
         <TextBox x:Name="textBox_B" HorizontalAlignment="Left" Height="31" Margin="151,176,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="59" MaxLines="1" FontFamily="Yu Gothic Medium" TextAlignment="Right" FontSize="17" TextOptions.TextHintingMode="Fixed" MinLines="1" MaxLength="5" BorderThickness="1" BorderBrush="Black" PreviewTextInput="textBox_A_PreviewTextInput"/>

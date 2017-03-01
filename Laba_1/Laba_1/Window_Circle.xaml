@@ -1,0 +1,22 @@
+﻿<Window x:Class="Laba_1.Window_Circle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laba_1"
+        mc:Ignorable="d"
+        Title="Лабораторна робота №1 - Циклічний алгоритм" Height="465" Width="740" ResizeMode="CanMinimize" Icon="/Laba_1;component/Resources/favicon.ico" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label x:Name="label" Content="Завдання:" HorizontalAlignment="Left" Height="31" Margin="329,25,0,0" VerticalAlignment="Top" Width="82" FontFamily="Segoe WP" FontSize="16"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="71" Margin="286,61,0,0" VerticalAlignment="Top" Width="170" Source="/Laba_1;component/Resources/Circle_task.PNG"/>
+        <TextBox x:Name="textBox_C" HorizontalAlignment="Left" Height="31" Margin="57,181,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="59" MaxLines="1" FontFamily="Yu Gothic Medium" TextAlignment="Right" FontSize="17" TextOptions.TextHintingMode="Fixed" MinLines="1" MaxLength="5"  BorderThickness="1" BorderBrush="Black" PreviewTextInput="textBox_A_PreviewTextInput"/>
+        <Label x:Name="label_3" Content="n" HorizontalAlignment="Left" Height="39" Margin="25,171,0,0" VerticalAlignment="Top" Width="27" FontFamily="Gabriola" FontSize="25"/>
+        <TextBox x:Name="textBox_D" HorizontalAlignment="Left" Height="31" Margin="183,181,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="59" MaxLines="1" FontFamily="Yu Gothic Medium" TextAlignment="Right" FontSize="17" TextOptions.TextHintingMode="Fixed" MinLines="1" MaxLength="5"  BorderThickness="1" BorderBrush="Black" PreviewTextInput="textBox_A_PreviewTextInput"/>
+        <Label x:Name="label_4" Content="p" HorizontalAlignment="Left" Height="43" Margin="156,171,0,0" VerticalAlignment="Top" Width="27" FontFamily="Gabriola" FontSize="25"/>
+        <Button x:Name="button_CalcS" Content="Знайти Y1" HorizontalAlignment="Left" Margin="499,175,0,0" VerticalAlignment="Top" Width="201" Height="40" Background="White" FontFamily="Segoe WP" FontSize="16" Click="button_CalcS_Click" />
+        <Button x:Name="button_CalcF" Content="Використати файл" HorizontalAlignment="Left" Margin="240,338,0,0" VerticalAlignment="Top" Width="263" Height="40" Background="White" FontFamily="Segoe WP" FontSize="16" Click="button_CalcF_Click" />
+        <TextBox x:Name="textBox_Y" HorizontalAlignment="Left" Height="31" Margin="67,260,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="633" MaxLines="1" FontFamily="Yu Gothic Medium" TextAlignment="Right" FontSize="17" TextOptions.TextHintingMode="Fixed" MinLines="1" MaxLength="36" BorderThickness="1" BorderBrush="Black" RenderTransformOrigin="-0.135,0.504" IsReadOnly="True"/>
+        <Label x:Name="label_5" Content="f = " HorizontalAlignment="Left" Height="39" Margin="25,252,0,0" VerticalAlignment="Top" Width="37" FontFamily="Gabriola" FontSize="25" FontStyle="Italic"/>
+        <Button x:Name="button" Content="Головне меню" HorizontalAlignment="Left" Margin="25,382,0,0" VerticalAlignment="Top" Width="133" Height="27" Background="White" Click="button_Click"/>
+    </Grid>
+</Window>

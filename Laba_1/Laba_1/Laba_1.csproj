@@ -56,9 +56,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CircleControll.cs" />
     <Compile Include="LinContoll.cs" />
     <Compile Include="MainControll.cs" />
     <Compile Include="RozControll.cs" />
+    <Compile Include="Window_Circle.xaml.cs">
+      <DependentUpon>Window_Circle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window_Lin.xaml.cs">
       <DependentUpon>Window_Lin.xaml</DependentUpon>
     </Compile>
@@ -77,6 +81,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Window_Circle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Window_Lin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -41,5 +41,17 @@ namespace Laba_1
             mainControll.OpenRozWindow();
             this.Visibility = Visibility.Visible;
         }
+
+        private void button_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void button_Circle_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+            mainControll.OpenCircleWindow();
+            this.Visibility = Visibility.Visible;
+        }
     }
 }

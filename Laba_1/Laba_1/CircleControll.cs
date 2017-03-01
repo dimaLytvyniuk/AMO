@@ -10,60 +10,53 @@ using System.Diagnostics;
 
 namespace Laba_1
 {
-    class LinContoll
+    class CircleControll
     {
-        private double y1 = 0;
+        private UInt32 f = 0;
 
-        public double Y1
+        public UInt32 F
         {
             get
             {
-                return y1;
+                return f;
             }
         }
 
-        public bool CalcS(string a,string b,string c,string d)
+        public bool CalcS(string n, string p)
         {
-            double a1, b1, c1, d1;
+            UInt32 n1, p1;
+
+            f = 0;
+
             try
             {
-                a1 = Convert.ToDouble(a);
-                b1 = Convert.ToDouble(b);
-                c1 = Convert.ToDouble(c);
-                d1 = Convert.ToDouble(d);
+                n1 = Convert.ToUInt32(n);
+                p1 = Convert.ToUInt32(p);
 
-                if (d1 != 0)
+                for (int a = 0; a <= n1;a++)
                 {
-                    y1 = Math.Pow(d1 * a1, b1) + Math.Pow(d1 * a1, (1 / d1));
-
-                    if (Double.IsNaN(y1))
+                    for (int b = 0; b <= p1; b++)
                     {
-                        MessageBox.Show("Не коректні дані: основа менша нуля, а показник не натуральне число", "Помилка");
-                        return false;
+                        f += (UInt32) (Math.Pow(a, b) + Math.Pow(b, a));
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Не коректні дані: d = 0", "Помилка");
-                    return false;
                 }
             }
             catch (Exception e)
             {
                 MessageBox.Show("Не коректні дані", "Помилка");
-                return false; 
+                return false;
             }
 
             return true;
         }
-        
+
         public bool CalcF()
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "Text file (*.txt)|*.txt";
             openFileDialog1.FileName = "deafault.txt";
             List<string> result = new List<string>();
-            string output = "result_lin.txt";
+            string output = "result_circle.txt";
 
             if (true == openFileDialog1.ShowDialog())
             {
@@ -76,18 +69,18 @@ namespace Laba_1
                     while ((str = reader.ReadLine()) != null)
                     {
                         string[] words = str.Split(' ');
-                        
-                        if (words.Length != 4)
+
+                        if (words.Length != 2)
                         {
                             MessageBox.Show("Не коректні дані у файлі", "Помилка");
                             return false;
                         }
 
-                        format = CalcS(words[0], words[1], words[2], words[3]);
+                        format = CalcS(words[0], words[1]);
 
                         if (format)
                         {
-                            str +="   Y1 =" + y1.ToString();
+                            str += "   f =" + f.ToString();
                             result.Add(str);
                         }
                         else
@@ -100,7 +93,7 @@ namespace Laba_1
 
                 using (StreamWriter writer = new StreamWriter(output, false))
                 {
-                    for (int i = 0; i < result.Count;i++)
+                    for (int i = 0; i < result.Count; i++)
                     {
                         writer.WriteLine(result[i]);
                     }
@@ -115,6 +108,6 @@ namespace Laba_1
                 MessageBox.Show("Не коректні дані у файлі", "Помилка");
                 return false;
             }
-        }     
+        }
     }
 }

@@ -46,5 +46,24 @@ namespace Laba_1
             else
                 Environment.Exit(0);
         }
+
+        public void OpenCircleWindow()
+        {
+            Window_Circle win_1 = new Window_Circle();
+
+            if (win_1.ShowDialog() == true)
+            {
+                win_1.WindowState = WindowState.Normal;
+
+                if (win_1.DialogResult == true)
+                {
+
+                }
+                else
+                    Environment.Exit(0);
+            }
+            else
+                Environment.Exit(0);
+        }
     }
 }

@@ -9,8 +9,8 @@
     <Grid>
         <Button x:Name="button_Lin" Content="Лінійний алгоритм" HorizontalAlignment="Left" Margin="105,60,0,0" VerticalAlignment="Top" Width="263" Height="40" Background="White" FontFamily="Segoe WP" FontSize="16" Click="button_Lin_Click" />
         <Button x:Name="button_Roz" Content="Алгоритм, що розгалужується" HorizontalAlignment="Left" Margin="105,160,0,0" VerticalAlignment="Top" Width="263" Height="40" Background="White" FontFamily="Segoe WP" FontSize="16" Click="button_Roz_Click" />
-        <Button x:Name="button_Circle" Content="Циклічний алгоритм" HorizontalAlignment="Left" Margin="105,260,0,0" VerticalAlignment="Top" Width="263" Height="40" Background="White" FontFamily="Segoe WP" FontSize="16" />
-        <Button x:Name="button_Exit" Content="Вихід" HorizontalAlignment="Left" Margin="105,360,0,0" VerticalAlignment="Top" Width="263" Height="40" Background="White" FontFamily="Segoe WP" FontSize="16" />
+        <Button x:Name="button_Circle" Content="Циклічний алгоритм" HorizontalAlignment="Left" Margin="105,260,0,0" VerticalAlignment="Top" Width="263" Height="40" Background="White" FontFamily="Segoe WP" FontSize="16" Click="button_Circle_Click" />
+        <Button x:Name="button_Exit" Content="Вихід" HorizontalAlignment="Left" Margin="105,360,0,0" VerticalAlignment="Top" Width="263" Height="40" Background="White" FontFamily="Segoe WP" FontSize="16" Click="button_Exit_Click" />
 
     </Grid>
 </Window>
