@@ -11,7 +11,7 @@ namespace TestSort
     {
         static void Main(string[] args)
         {
-            int n = 100000;
+            int n = 1000000;
             Random random = new Random();
             UInt32[] mass = new UInt32[n];
             UInt32[] mass2 = new UInt32[n];
@@ -108,11 +108,20 @@ namespace TestSort
            */
             Stopwatch multiWatch = new Stopwatch();
 
+            Sort sort = new Sort(mass);
+
             multiWatch.Start();
             uint[] mass1 = First(mass, n, maxRoz);
             multiWatch.Stop();
             TimeSpan ts = multiWatch.Elapsed;
-            Console.WriteLine("{0}", String.Format("{0:00}", ts.Minutes) + " хвилин " + String.Format("{0:00}", ts.Seconds) + " секунд " + String.Format("{0:00}", ts.Milliseconds) + " мiлiсекунд");
+            Console.WriteLine("{0}", String.Format("{0:00}", ts.Minutes) + " хвилин " + String.Format("{0:00}", ts.Seconds) + " секунд " + String.Format("{0:00}", ts.Milliseconds) + " мілісекунд");
+
+            multiWatch = new Stopwatch();
+            multiWatch.Start();
+            sort.qsort(0, n - 1);
+            multiWatch.Stop();
+            ts = multiWatch.Elapsed;
+            Console.WriteLine("{0}", String.Format("{0:00}", ts.Minutes) + " хвилин " + String.Format("{0:00}", ts.Seconds) + " секунд " + String.Format("{0:00}", ts.Milliseconds) + " мілісекунд");
             Console.ReadKey();
         }
 
@@ -205,31 +214,68 @@ namespace TestSort
 
             return mass;
         }
+        int y = 0;
     }
 
-    public class Sort1
+    public class Sort
     {
-        public void radix_int(UInt32[] mass,int begin,int size,UInt32 bit)
+        public uint[] test;
+        public Sort(uint[] mass)
         {
-            if (bit == 0)
-                return;
+            this.test = mass;
+        }
 
-            if (size < 2)
-                return;
-
-            int last = 0;
-            for (int i = 0; i < size;i++)
+        public void qsort(int start, int finish)
+        {
+            if (finish - start > 20)
             {
-                if ((mass[i] & bit) == 0)
+                int wall = start,
+                    opor = finish;
+                uint prom;
+
+                for (int i = start; i < finish; i++)
                 {
-                    UInt32 prom = mass[i];
-                    mass[i] = mass[last];
-                    mass[last++] = prom;
+                    if (test[i] <= test[opor])
+                    {
+                        prom = test[wall];
+                        test[wall] = test[i];
+                        test[i] = prom;
+                        wall++;
+                    }
+                }
+
+                prom = test[wall];
+                test[wall] = test[opor];
+                test[opor] = prom;
+
+                if (wall != 0)
+                    qsort(start, wall - 1);
+
+                if (wall != finish)
+                    qsort(wall + 1, finish);
+            }
+            else if (finish - start != 0)
+            {
+                for (int i = 0; i < (finish - start); i++)
+                {
+                    bool swap = false;
+
+                    for (int j = start; j < finish - i; j++)
+                    {
+                        if (test[j] > test[j + 1])
+                        {
+                            uint prom = test[j];
+                            test[j] = test[j + 1];
+                            test[j + 1] = prom;
+                            swap = true;
+                        }
+                    }
+
+                    if (!swap)
+                        break;
                 }
             }
-
-            radix_int(mass, begin, last, bit >> 1);
-            radix_int(mass, begin + last, size - last, bit >> 1);
         }
     }
 }
+
