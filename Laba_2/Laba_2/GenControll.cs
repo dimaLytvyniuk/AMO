@@ -83,7 +83,7 @@ namespace Laba_2
             outputData = new List<string>();
 
             for (int i = 0; i < 10;i++)
-                outputData.Add("Масив №: " + (i + 1) + "К-сть елементів=" + n[i] + " Час сортування: " + String.Format("{0:00}", statistic[i].Minutes) + " хвилин " + String.Format("{0:00}", statistic[i].Seconds) + " секунд " + String.Format("{0:00}", statistic[i].Milliseconds) + " мілісекунд" + "\n");
+                outputData.Add("Масив №: " + (i + 1) + " К-сть елементів=" + n[i] + " Час сортування: " + statistic[i].TotalMilliseconds + " мілісекунд" );
 
             for (int i = 0; i < 10; i++)
             {
