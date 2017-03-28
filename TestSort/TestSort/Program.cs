@@ -11,7 +11,7 @@ namespace TestSort
     {
         static void Main(string[] args)
         {
-            int n = 100000;
+            int n = 1000000;
             Random random = new Random();
             UInt32[] mass = new UInt32[n];
             UInt32[] mass2 = new UInt32[n];
@@ -118,8 +118,6 @@ namespace TestSort
 
         static uint[] First(uint[] mass,int n,int maxRoz)
         {
-            Random random = new Random();
-
             List<UInt32> list0 = new List<UInt32>();
             List<UInt32> list1 = new List<UInt32>();
             List<UInt32> list2 = new List<UInt32>();
