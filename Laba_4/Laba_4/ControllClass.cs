@@ -12,13 +12,13 @@ namespace Laba_4
 {
     class ControllClass
     {
-        private void PrintGraph(Chart chart, double a, double b,double[] nodes,int n, double h)
+        private void PrintGraph(Chart chart, double a, double b, double[] nodes, int n, double h)
         {
             int n1 = 121;
 
             double h1 = (b - a) / (n1 - 1);
 
-            double[]    y1 = new double[n1],
+            double[] y1 = new double[n1],
                         x1 = new double[n1],
                         y2 = new double[n1];
 
@@ -40,7 +40,7 @@ namespace Laba_4
             chart.Series["Sin_Inter"].Color = System.Drawing.Color.Green;
         }
 
-        public double SerchRes(Chart chart, string a1,string b1,string e1)
+        public double SerchRes(Chart chart, string a1, string b1, string e1)
         {
             double a = 0,
                 b = 0,
@@ -50,7 +50,7 @@ namespace Laba_4
             {
                 a = Convert.ToDouble(a1);
                 b = Convert.ToDouble(b1);
-                e = Convert.ToDouble(e1);    
+                e = Convert.ToDouble(e1);
             }
             catch (Exception err)
             {

@@ -19,7 +19,7 @@
         <Image x:Name="image" HorizontalAlignment="Center" Height="45" Margin="0,45,0,0" Grid.Row="0" VerticalAlignment="Top" Width="566" Source="Variant.PNG"/>
         <Label x:Name="label_a" Content="a" HorizontalAlignment="Left" Height="Auto" Margin="221,15,0,0" VerticalAlignment="Top" Width="26" FontFamily="Segoe WP" FontSize="16" Grid.Row="1" />
         <TextBox x:Name="textBox_A" HorizontalAlignment="Left" Height="30" Margin="252,15,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="100" MaxLines="1" FontFamily="Yu Gothic Medium" TextAlignment="Right" FontSize="16" TextOptions.TextHintingMode="Fixed" MinLines="1" MaxLength="8" BorderThickness="1" BorderBrush="Black" Grid.Row="1" PreviewTextInput="textBox_A_PreviewTextInput"/>
-        <WindowsFormsHost Width="432" Grid.Row="4" Margin="252,25,210,0" HorizontalAlignment="Center" Height="280" VerticalAlignment="Top">
+        <WindowsFormsHost Width="432" Grid.Row="4" Margin="252,25,210,0" HorizontalAlignment="Center" Height="270" VerticalAlignment="Top">
             <dvc:Chart x:Name="chartG"/>
         </WindowsFormsHost>
         <Label x:Name="label_b" Content="b" HorizontalAlignment="Left" Height="Auto" Margin="387,15,0,0" VerticalAlignment="Top" Width="26" FontFamily="Segoe WP" FontSize="16" Grid.Row="1" />
@@ -27,7 +27,7 @@
         <Label x:Name="label_E" Content="ꜫ" HorizontalAlignment="Left" Height="Auto" Margin="553,15,0,0" VerticalAlignment="Top" Width="26" FontFamily="Segoe WP" FontSize="16" Grid.Row="1" />
         <TextBox x:Name="textBox_E" HorizontalAlignment="Left" Height="30" Margin="584,15,0,0" TextWrapping="Wrap" Text="0.001" VerticalAlignment="Top" Width="100" MaxLines="1" FontFamily="Yu Gothic Medium" TextAlignment="Right" FontSize="16" TextOptions.TextHintingMode="Fixed" MinLines="1" MaxLength="11" BorderThickness="1" BorderBrush="Black" Grid.Row="1" PreviewTextInput="textBox_E_PreviewTextInput" />
         <Button x:Name="button_result" Content="Знайти корінь рівняння" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" Click="button_result_Click" Grid.Row="2" Width="232" Height="40" Background="White" FontFamily="Segoe WP" FontSize="16"/>
-        <Label x:Name="label_x" Content="x= " HorizontalAlignment="Left" Height="Auto" Margin="326,15,0,0" VerticalAlignment="Top" Width="26" FontFamily="Segoe WP" FontSize="16" Grid.Row="3" RenderTransformOrigin="-0.731,0.452" />
-        <TextBox x:Name="textBox_X" HorizontalAlignment="Left" Height="30" Margin="362,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" MaxLines="1" FontFamily="Yu Gothic Medium" TextAlignment="Right" FontSize="16" TextOptions.TextHintingMode="Fixed" MinLines="1" MaxLength="14" BorderThickness="1" BorderBrush="Black" Grid.Row="3" IsReadOnly="True"/>
+        <Label x:Name="label_x" Content="x= " HorizontalAlignment="Left" Height="Auto" Margin="331,30,0,0" VerticalAlignment="Top" Width="26" FontFamily="Segoe WP" FontSize="16" Grid.Row="3" RenderTransformOrigin="-0.731,0.452" />
+        <TextBox x:Name="textBox_X" HorizontalAlignment="Left" Height="60" Margin="362,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" FontFamily="Yu Gothic Medium" TextAlignment="Right" FontSize="16" TextOptions.TextHintingMode="Fixed" MinLines="1" BorderThickness="1" BorderBrush="Black" Grid.Row="3" IsReadOnly="True"/>
     </Grid>
 </Window>
