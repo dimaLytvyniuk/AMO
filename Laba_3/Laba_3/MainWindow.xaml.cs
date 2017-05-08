@@ -32,12 +32,12 @@ namespace Laba_3
 
         private void button_sin_Click(object sender, RoutedEventArgs e)
         {
-            textBox_out.Text = controlClass.CallSin(chart, textBox_in.Text).ToString();
+            textBox_out.Text = controlClass.CallSin(chart, chartpoh, textBox_in.Text).ToString();
         }
 
         private void button_myfunc_Click(object sender, RoutedEventArgs e)
         {
-            textBox_out.Text = controlClass.CallMyFunc(chart, textBox_in.Text).ToString();
+            textBox_out.Text = controlClass.CallMyFunc(chart, chartpoh, textBox_in.Text).ToString();
         }
 
         private void textBox_in_PreviewTextInput(object sender, TextCompositionEventArgs e)

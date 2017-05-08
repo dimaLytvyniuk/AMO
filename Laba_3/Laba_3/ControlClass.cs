@@ -35,7 +35,7 @@ namespace Laba_3
             this.dataPoh = dataPoh;
         }
 
-        public double CallSin(Chart chart, string val)
+        public double CallSin(Chart chart, Chart chartpoh,string val)
         {
             double a = 0,
                    b = 9,
@@ -95,7 +95,7 @@ namespace Laba_3
                     yrizn[i] = Math.Abs(ypoh[i] - y1[i]);
                 }
 
-                PrintGraph(chart);
+                PrintGraph(chart, chartpoh);
                 MakeTables();
                 return result;
             }
@@ -103,7 +103,7 @@ namespace Laba_3
             return 0;
         }
 
-        public double CallMyFunc(Chart chart, string val)
+        public double CallMyFunc(Chart chart, Chart chartpoh, string val)
         {
             double a = 0,
                    b = 3,
@@ -163,7 +163,7 @@ namespace Laba_3
                     yrizn[i] = Math.Abs(ypoh[i] - y1[i]);
                 }
 
-                PrintGraph(chart);
+                PrintGraph(chart,chartpoh);
                 MakeTables();
                 return result;
             }
@@ -171,18 +171,24 @@ namespace Laba_3
             return 0;
         }
 
-        private void PrintGraph(Chart chart)
+        private void PrintGraph(Chart chart,Chart chartpoh)
         {
             // Все графики находятся в пределах области построения ChartArea, создадим ее
             chart.ChartAreas.Clear();
-            chart.Series.Clear(); 
+            chart.Series.Clear();
+            chartpoh.ChartAreas.Clear();
+            chartpoh.Series.Clear();
             chart.ChartAreas.Add(new ChartArea("Default"));
+            chartpoh.ChartAreas.Add(new ChartArea("Default"));
 
             // Добавим линию, и назначим ее в ранее созданную область "Default"
             chart.Series.Add(new Series("Sin_Inter"));
+            chartpoh.Series.Add(new Series("Sin_Inter"));
+
             chart.Series["Sin_Inter"].ChartArea = "Default";
             chart.Series["Sin_Inter"].ChartType = SeriesChartType.Line;
-
+            chartpoh.Series["Sin_Inter"].ChartArea = "Default";
+            chartpoh.Series["Sin_Inter"].ChartType = SeriesChartType.Line;
             // добавим данные линии
             chart.Series["Sin_Inter"].Points.DataBindXY(xstr, y1);
             chart.Series["Sin_Inter"].Color = System.Drawing.Color.Black;
@@ -193,12 +199,16 @@ namespace Laba_3
             // добавим данные линии
             chart.Series["Sin_Real"].Points.DataBindXY(xstr, y2);
             chart.Series["Sin_Real"].Color = System.Drawing.Color.Red;
+
+            chartpoh.Series["Sin_Inter"].Points.DataBindXY(xstr, yrizn);
+            chartpoh.Series["Sin_Inter"].Color = System.Drawing.Color.Green;
         }
 
         private void MakeTables()
         {
             dataNodes.Items.Clear();
             dataValues.Items.Clear();
+            dataPoh.Items.Clear();
 
             for (int i = 0; i < nodes.Length; i++)
             {
