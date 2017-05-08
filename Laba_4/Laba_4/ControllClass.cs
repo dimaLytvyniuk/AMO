@@ -95,7 +95,7 @@ namespace Laba_4
                         else
                             akoef = c;
 
-                        poh = Math.Abs(bkoef - akoef) / Math.Pow(2, k);
+                        poh = Math.Abs(bkoef - akoef);
                         k++;
                     }
                     while (Math.Abs(poh) > e);

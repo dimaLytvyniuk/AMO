@@ -30,7 +30,7 @@ namespace Laba_4
 
         private void textBox_A_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            if (Char.IsDigit(e.Text, 0) || (e.Text == ".") || (e.Text == "-"))
+            if (Char.IsDigit(e.Text, 0) || (e.Text == ",") || (e.Text == "-"))
             {
                 e.Handled = false;
             }
@@ -40,7 +40,7 @@ namespace Laba_4
 
         private void textBox_E_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            if (Char.IsDigit(e.Text, 0) || (e.Text == "."))
+            if (Char.IsDigit(e.Text, 0) || (e.Text == ","))
             {
                 e.Handled = false;
             }
